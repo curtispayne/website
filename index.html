@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Name — Engineering Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <a href="#top" class="nav-mark">YN</a>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#placement">Placement</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header id="top" class="hero">
+  <p class="eyebrow">Engineering Student — Placement in Motorsport Strategy</p>
+  <h1 class="hero-title">Your Name</h1>
+  <p class="hero-sub">I work at the intersection of data, decisions, and speed —<br>currently on placement in F1 strategy, aiming for a graduate role in the paddock.</p>
+  <div class="hero-actions">
+    <a href="#projects" class="btn btn-primary">See my work</a>
+    <a href="cv.pdf" class="btn btn-ghost">Download CV</a>
+  </div>
+</header>
+
+<!-- TRACE DIVIDER -->
+<div class="trace-divider" aria-hidden="true">
+  <svg viewBox="0 0 1200 80" preserveAspectRatio="none">
+    <path class="trace-path" d="M0,60 C100,60 140,20 220,20 C300,20 320,65 400,65 C480,65 500,10 600,10 C700,10 720,55 800,55 C880,55 900,30 1000,30 C1080,30 1100,45 1200,45" />
+    <circle class="trace-peak" cx="600" cy="10" r="4" />
+  </svg>
+</div>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+  <div class="section-inner">
+    <p class="section-label">01 — About</p>
+    <h2 class="section-title">Currently mapping the line between mechanical engineering and race-day decisions.</h2>
+    <p class="section-text">
+      I'm a [year] engineering student at [University], currently on a year-long placement in the strategy
+      function at [Team — or leave general]. My background is in mechanical engineering, but I've found myself
+      drawn to the layer where engineering, data, and split-second decision-making meet.
+    </p>
+    <p class="section-text">
+      Outside of work, I build things — mostly with a 3D printer and a Python interpreter open in the other window.
+      This site is a running log of that, alongside a general (non-confidential) picture of what my placement
+      actually involves.
+    </p>
+  </div>
+</section>
+
+<!-- PLACEMENT -->
+<section id="placement" class="section section-alt">
+  <div class="section-inner">
+    <p class="section-label">02 — Placement</p>
+    <h2 class="section-title">A year inside a strategy team.</h2>
+    <p class="section-text">
+      I'm currently on placement within [Team]'s strategy group. In line with confidentiality requirements, I don't
+      share specifics of proprietary tools, data, or decisions here — but broadly, my day-to-day involves:
+    </p>
+    <ul class="plain-list">
+      <li>Working with historical and live race data to inform decision-making under uncertainty</li>
+      <li>Supporting the development of tools used to evaluate strategic options</li>
+      <li>Collaborating closely with engineers across performance, tyres, and operations</li>
+    </ul>
+    <p class="section-text">
+      If you'd like to know more about what this actually involves day-to-day, I'm always happy to talk about it —
+      just get in touch.
+    </p>
+  </div>
+</section>
+
+<!-- TRACE DIVIDER -->
+<div class="trace-divider" aria-hidden="true">
+  <svg viewBox="0 0 1200 80" preserveAspectRatio="none">
+    <path class="trace-path" d="M0,30 C100,30 120,60 200,60 C280,60 300,15 380,15 C460,15 480,50 560,50 C640,50 660,25 740,25 C820,25 840,58 920,58 C1000,58 1020,20 1200,20" />
+    <circle class="trace-peak" cx="380" cy="15" r="4" />
+  </svg>
+</div>
+
+<!-- PROJECTS -->
+<section id="projects" class="section">
+  <div class="section-inner">
+    <p class="section-label">03 — Projects</p>
+    <h2 class="section-title">Independent work, built outside of the day job.</h2>
+
+    <div class="project-grid">
+      <article class="project-card">
+        <p class="project-tag">Telemetry &amp; Data</p>
+        <h3 class="project-title">Lap Telemetry Visualiser</h3>
+        <p class="project-text">
+          A Python tool for pulling and visualising public F1 telemetry — comparing driver lines through corners,
+          sector deltas, and tyre degradation across a stint. Built with FastF1 and matplotlib, entirely on public data.
+        </p>
+        <div class="project-meta">
+          <span>Python</span><span>FastF1</span><span>Data Viz</span>
+        </div>
+        <a href="#" class="project-link">View write-up →</a>
+      </article>
+
+      <article class="project-card">
+        <p class="project-tag">Hardware &amp; Design</p>
+        <h3 class="project-title">[Robot Project Name]</h3>
+        <p class="project-text">
+          Design and build of [describe robot] — from CAD through to 3D-printed components and control code.
+          Documented here as a build log: design decisions, iterations, and what broke along the way.
+        </p>
+        <div class="project-meta">
+          <span>CAD</span><span>3D Printing</span><span>Embedded</span>
+        </div>
+        <a href="#" class="project-link">View build log →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section section-alt">
+  <div class="section-inner section-inner-narrow">
+    <p class="section-label">04 — Contact</p>
+    <h2 class="section-title">Get in touch.</h2>
+    <p class="section-text">
+      Always happy to talk engineering, strategy, or anything in between.
+    </p>
+    <div class="contact-links">
+      <a href="mailto:you@example.com">you@example.com</a>
+      <a href="https://linkedin.com/in/yourname" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/yourname" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>Built by hand. Updated as the work happens.</p>
+</footer>
+
+</body>
+</html>
