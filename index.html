@@ -3,136 +3,51 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Curtis Payne — Engineering Portfolio</title>
+<title>Curtis Payne</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="index-hub.css">
 </head>
 <body>
 
-<nav class="nav">
-  <a href="#top" class="nav-mark">Curtis Payne</a>
-  <div class="nav-links">
-    <a href="#about">About</a>
-    <a href="#placement">Placement</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </div>
-</nav>
-
-<!-- HERO -->
-<header id="top" class="hero">
-  <p class="eyebrow">Automotive Engineering Student</p>
-  <h1 class="hero-title">Curtis Payne</h1>
-  <p class="hero-sub">...</p>
-  <div class="hero-actions">
-    <a href="#projects" class="btn btn-primary">See my work</a>
-    <a href="cv.pdf" class="btn btn-ghost">Download CV</a>
-  </div>
+<header class="header">
+  <h1 class="name">Curtis Payne</h1>
 </header>
 
-<!-- TRACE DIVIDER -->
-<div class="trace-divider" aria-hidden="true">
-  <svg viewBox="0 0 1200 80" preserveAspectRatio="none">
-    <path class="trace-path" d="M0,60 C100,60 140,20 220,20 C300,20 320,65 400,65 C480,65 500,10 600,10 C700,10 720,55 800,55 C880,55 900,30 1000,30 C1080,30 1100,45 1200,45" />
-    <circle class="trace-peak" cx="600" cy="10" r="4" />
-  </svg>
-</div>
+<main class="panel-grid">
 
-<!-- ABOUT -->
-<section id="about" class="section">
-  <div class="section-inner">
-    <p class="section-label">01 — About</p>
-    <h2 class="section-title">...</h2>
-    <p class="section-text">
-      ...
-    </p>
-    <p class="section-text">
-      ...
-    </p>
-  </div>
-</section>
-
-<!-- PLACEMENT -->
-<section id="placement" class="section section-alt">
-  <div class="section-inner">
-    <p class="section-label">02 — Placement</p>
-    <h2 class="section-title">...</h2>
-    <p class="section-text">
-      ...
-    </p>
-    <ul class="plain-list">
-      <li>...</li>
-      <li>...</li>
-      <li>...</li>
-    </ul>
-    <p class="section-text">
-      ...
-    </p>
-  </div>
-</section>
-
-<!-- TRACE DIVIDER -->
-<div class="trace-divider" aria-hidden="true">
-  <svg viewBox="0 0 1200 80" preserveAspectRatio="none">
-    <path class="trace-path" d="M0,30 C100,30 120,60 200,60 C280,60 300,15 380,15 C460,15 480,50 560,50 C640,50 660,25 740,25 C820,25 840,58 920,58 C1000,58 1020,20 1200,20" />
-    <circle class="trace-peak" cx="380" cy="15" r="4" />
-  </svg>
-</div>
-
-<!-- PROJECTS -->
-<section id="projects" class="section">
-  <div class="section-inner">
-    <p class="section-label">03 — Projects</p>
-    <h2 class="section-title">...</h2>
-
-    <div class="project-grid">
-      <article class="project-card">
-        <p class="project-tag">Telemetry &amp; Data</p>
-        <h3 class="project-title">...</h3>
-        <p class="project-text">
-          ...
-        </p>
-        <div class="project-meta">
-          <span>Python</span><span>FastF1</span><span>Data Viz</span>
-        </div>
-        <a href="#" class="project-link">View write-up →</a>
-      </article>
-
-      <article class="project-card">
-        <p class="project-tag">Hardware &amp; Design</p>
-        <h3 class="project-title">...</h3>
-        <p class="project-text">
-          ...
-        </p>
-        <div class="project-meta">
-          <span>CAD</span><span>3D Printing</span><span>Embedded</span>
-        </div>
-        <a href="#" class="project-link">View build log →</a>
-      </article>
+  <a class="panel" href="https://your-telemetry-app.streamlit.app" target="_blank" rel="noopener">
+    <div class="panel-inner">
+      <p class="panel-tag">Data &amp; Machine Learning</p>
+      <h2 class="panel-title">Telemetry Project</h2>
+      <p class="panel-desc">Interactive analysis built with FastF1 and Streamlit.</p>
+      <span class="panel-arrow">Open →</span>
     </div>
-  </div>
-</section>
+  </a>
 
-<!-- CONTACT -->
-<section id="contact" class="section section-alt">
-  <div class="section-inner section-inner-narrow">
-    <p class="section-label">04 — Contact</p>
-    <h2 class="section-title">Get in touch.</h2>
-    <p class="section-text">
-      ...
-    </p>
-    <div class="contact-links">
-      <a href="mailto:you@example.com">you@example.com</a>
-      <a href="https://linkedin.com/in/yourname" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://github.com/yourname" target="_blank" rel="noopener">GitHub</a>
+  <a class="panel" href="https://your-robot-app.streamlit.app" target="_blank" rel="noopener">
+    <div class="panel-inner">
+      <p class="panel-tag">Hardware &amp; Design</p>
+      <h2 class="panel-title">Robot Build</h2>
+      <p class="panel-desc">Design log, CAD, and build progress.</p>
+      <span class="panel-arrow">Open →</span>
     </div>
-  </div>
-</section>
+  </a>
+
+  <a class="panel" href="https://your-third-app.streamlit.app" target="_blank" rel="noopener">
+    <div class="panel-inner">
+      <p class="panel-tag">Project</p>
+      <h2 class="panel-title">Third Project</h2>
+      <p class="panel-desc">Short description goes here.</p>
+      <span class="panel-arrow">Open →</span>
+    </div>
+  </a>
+
+</main>
 
 <footer class="footer">
-  <p>...</p>
+  <p>curtispayne.com</p>
 </footer>
 
 </body>
