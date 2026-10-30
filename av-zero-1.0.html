@@ -1,12 +1,69 @@
-<script type="module"
-  src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js">
-</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AV-Zero 1.0 | Curtis Payne</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index-hub.css">
 
-<model-viewer
-  src="assets/av-zero 1.0 - 1.glb"
-  alt="Interactive 3D model of the AV-Zero 1.0 rover"
-  camera-controls
-  auto-rotate
-  poster="assets/av-zero-preview.png"
-  style="width: 100%; height: 70vh;">
-</model-viewer>
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+
+  <style>
+    .model-page {
+      flex: 1;
+      width: 100%;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 6vw 8vh;
+    }
+
+    .model-viewer {
+      display: block;
+      width: 100%;
+      height: 70vh;
+      min-height: 360px;
+      background: #fff;
+      border: 1px solid #E6E4DF;
+      border-radius: 18px;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 20px;
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .back-link:hover {
+      color: #6D28D9;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <h1 class="name">AV-Zero 1.0</h1>
+  </header>
+
+  <main class="model-page">
+    <a class="back-link" href="rover.html">← Back to Rover</a>
+
+    <model-viewer
+      class="model-viewer"
+      src="assets/av-zero-1.0.glb"
+      alt="Interactive 3D model of the AV-Zero 1.0 rover"
+      camera-controls
+      touch-action="pan-y"
+      shadow-intensity="1">
+    </model-viewer>
+  </main>
+
+  <footer class="footer">
+    <p>Drag to rotate the model. Scroll or pinch to zoom.</p>
+  </footer>
+
+</body>
+</html>
