@@ -123,11 +123,12 @@ body {
 
 .version-image {
   display: block;
-  width: 160px;
-  height: 160px;
+  width: 180px;
+  height: 180px;
   margin: 12px auto 0;
   border-radius: 50%;
-  object-fit: cover;
+  object-fit: contain;
+  background-color: #fff;
 }
 
 .back-links {
