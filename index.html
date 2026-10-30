@@ -8,6 +8,59 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="index-hub.css">
+  <style>
+    .love-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      display: grid;
+      place-content: center;
+      overflow: hidden;
+      background: rgba(20, 23, 26, 0.94);
+      color: #fff;
+      text-align: center;
+    }
+
+    .love-overlay[hidden] {
+      display: none;
+    }
+
+    .love-overlay::before {
+      position: absolute;
+      inset: 50% auto auto 50%;
+      color: #e11d48;
+      content: "♥";
+      font-size: min(135vmin, 120rem);
+      line-height: 1;
+      opacity: 0.92;
+      transform: translate(-50%, -50%);
+    }
+
+    .love-message {
+      position: relative;
+      z-index: 1;
+      width: min(65vw, 9em);
+      margin: 0;
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 8vw, 7rem);
+      line-height: 1.05;
+      text-shadow: 0 2px 18px rgba(80, 0, 20, 0.55);
+    }
+
+    .scatter-hearts {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .scatter-heart {
+      position: absolute;
+      line-height: 1;
+      transform: translate(-50%, -50%);
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+  </style>
 </head>
 <body>
 
@@ -30,5 +83,78 @@
     <p>curtispayne.com</p>
   </footer>
 
+  <div class="love-overlay" id="love-overlay" role="status" aria-live="polite" hidden>
+    <div class="scatter-hearts" id="scatter-hearts" aria-hidden="true"></div>
+    <p class="love-message">I love you</p>
+  </div>
+
+  <script>
+    const secretKeys = new Set(["KeyN", "KeyU", "KeyS", "KeyH"]);
+    const pressedKeys = new Set();
+    const loveOverlay = document.getElementById("love-overlay");
+    const scatterHearts = document.getElementById("scatter-hearts");
+    const heartColors = ["#f9a8d4", "#facc15", "#c4b5fd", "#67e8f9", "#fb7185", "#86efac", "#fdba74"];
+    let chordActive = false;
+
+    const heartColumns = [5, 18, 31, 44, 56, 69, 82, 95];
+    const heartRows = [8, 24, 40, 60, 76, 92];
+
+    heartRows.forEach((row, rowIndex) => {
+      heartColumns.forEach((column, columnIndex) => {
+        if (column >= 30 && column <= 70 && row >= 30 && row <= 70) {
+          return;
+        }
+
+        const index = rowIndex * heartColumns.length + columnIndex;
+        const heart = document.createElement("span");
+        const left = column + ((index * 7) % 9) - 4;
+        const top = row + ((index * 11) % 9) - 4;
+        const size = 14 + ((index * 13) % 29);
+
+        heart.className = "scatter-heart";
+        heart.textContent = "♥";
+        heart.style.left = `${left}%`;
+        heart.style.top = `${top}%`;
+        heart.style.fontSize = `${size}px`;
+        heart.style.color = heartColors[index % heartColors.length];
+        scatterHearts.append(heart);
+      });
+    });
+
+    function isSecretChordPressed() {
+      return [...secretKeys].every((key) => pressedKeys.has(key));
+    }
+
+    document.addEventListener("keydown", (event) => {
+      if (event.code === "Escape") {
+        pressedKeys.clear();
+        chordActive = false;
+        loveOverlay.hidden = true;
+        return;
+      }
+
+      if (secretKeys.has(event.code)) {
+        pressedKeys.add(event.code);
+        if (isSecretChordPressed() && !chordActive) {
+          loveOverlay.hidden = !loveOverlay.hidden;
+          chordActive = true;
+        }
+      }
+    });
+
+    document.addEventListener("keyup", (event) => {
+      if (secretKeys.has(event.code)) {
+        pressedKeys.delete(event.code);
+        if (!isSecretChordPressed()) {
+          chordActive = false;
+        }
+      }
+    });
+
+    window.addEventListener("blur", () => {
+      pressedKeys.clear();
+      chordActive = false;
+    });
+  </script>
 </body>
 </html>
